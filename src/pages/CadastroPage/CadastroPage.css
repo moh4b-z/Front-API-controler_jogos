@@ -47,3 +47,16 @@ button[type="submit"] {
   font-size: 1rem;
   cursor: pointer;
 }
+.custom-select {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 200px;
+}
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: #eee;
+}

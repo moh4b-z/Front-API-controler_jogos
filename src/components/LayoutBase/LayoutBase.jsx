@@ -1,5 +1,5 @@
-import React from 'react';
-import './LayoutBase.css';
+import React from 'react'
+import './LayoutBase.css'
 
 const LayoutBase = ({ children }) => {
   return (

@@ -13,7 +13,7 @@ async function postEmpresa(data) {
             id_paises: data.id_paises
         }
 
-        const response = await fetch(`${BASE_URL}/user/cadastrarUser`, {
+        const response = await fetch(`${BASE_URL}/empresa/post`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

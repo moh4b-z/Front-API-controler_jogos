@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import './LoginPage.css'
 
 // Funções de login (importe do seu sistema)
-import { putLoginUsuario, putLoginEmpresa } from '../api'; // ajuste o caminho conforme necessário
+import putLoginEmpresa from '../../services/empresa/postEmpresa'
+import putLoginUsuario from '../../services/user/postUsuario'
 
 export default function LoginPage() {
   const [tipoLogin, setTipoLogin] = useState('usuario'); // 'usuario' ou 'empresa'

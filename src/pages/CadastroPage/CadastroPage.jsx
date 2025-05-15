@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './CadastroPage.css'
 
 // Funções de API (exemplo, você deve importar ou definir no seu projeto real)
 import postUsuario from '../../services/user/postUsuario'
@@ -15,10 +16,10 @@ export default function CadastroPage() {
   useEffect(() => {
     async function fetchData() {
       const paisesData = await getSearchAllPaises();
-      setPaises(paisesData);
+      setPaises(paisesData.countries);
 
       const sexosData = await getSearchAllSexo();
-      setSexos(sexosData);
+      setSexos(sexosData.sexes);
     }
     fetchData();
   }, []);
