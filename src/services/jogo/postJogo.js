@@ -1,12 +1,15 @@
 import BASE_URL from '../config'
 
-async function loginUsuario(login) {
+
+async function postJogo(jogo) {
     try {
+        let dados = jogo
 
-        const dados = login
+        // console.log(dados)
+        
 
-        const response = await fetch(`${BASE_URL}/usuario/login`, {
-            method: 'PUT',
+        const response = await fetch(`${BASE_URL}/jogo/post`, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -32,4 +35,4 @@ async function loginUsuario(login) {
     }
 }
 
-export default loginUsuario
+export default postJogo

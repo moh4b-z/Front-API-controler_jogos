@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { useSearchParams, useNavigate } from 'react-router-dom'
+import loginEmpresa from '../../services/empresa/login'
+import loginUsuario from '../../services/user/login'
 import './LoginPage.css'
 
-// Funções de login (importe do seu sistema)
-import putLoginEmpresa from '../../services/empresa/postEmpresa'
-import putLoginUsuario from '../../services/user/postUsuario'
 
 export default function LoginPage() {
   const [tipoLogin, setTipoLogin] = useState('usuario'); // 'usuario' ou 'empresa'
@@ -26,9 +26,9 @@ export default function LoginPage() {
     }
 
     if (tipoLogin === 'usuario') {
-      await putLoginUsuario(formData);
+      await loginUsuario(formData);
     } else {
-      await putLoginEmpresa(formData);
+      await loginEmpresa(formData);
     }
   };
 

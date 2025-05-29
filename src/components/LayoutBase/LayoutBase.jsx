@@ -1,7 +1,10 @@
 import React from 'react'
 import './LayoutBase.css'
+import  {useAuth} from '../../contexts/AuthContext'
+import  GamePostCard from '../GamePostCard/GamePostCard'
 
 const LayoutBase = ({ children }) => {
+  const { user } = useAuth()
   return (
     <div className="layout">
       <header>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import './CadastroPage.css'
 
 // Funções de API (exemplo, você deve importar ou definir no seu projeto real)

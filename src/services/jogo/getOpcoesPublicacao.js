@@ -1,12 +1,14 @@
 import BASE_URL from '../config'
 
-async function loginUsuario(login) {
+async function getOpcoesPublicacao(publisher) {
     try {
+        let dados = publisher
 
-        const dados = login
+        // console.log(dados)
+        
 
-        const response = await fetch(`${BASE_URL}/usuario/login`, {
-            method: 'PUT',
+        const response = await fetch(`${BASE_URL}/jogo/get/getSearchAllCarateriticas`, {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -19,7 +21,7 @@ async function loginUsuario(login) {
         // console.log(response)
         
         if (!response.ok) {
-            throw new Error('Erro ao cadastrar usuário')
+            throw new Error('Erro ao pegar as informações')
         }
 
         const responseData = await response.json()
@@ -32,4 +34,4 @@ async function loginUsuario(login) {
     }
 }
 
-export default loginUsuario
+export default getOpcoesPublicacao
